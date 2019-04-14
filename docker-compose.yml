@@ -1,0 +1,13 @@
+
+version: '3.5'
+
+services:
+  cv:
+    build: .
+    entrypoint: /usr/src/bot/entrypoint.sh
+    volumes:          
+    - ./:/usr/src/bot  
+    environment:
+     BOT_TOKEN:               # PUT HERE YOUR BOT TOKEN 
+     BOT_OWNER_TELEGRAM_ID:   # PUT HERE YOUR TELEGRAM ID TO RECEIVE MESSAGES FROM THE BOT
+     #SESSION_TTL: 10 #session ttl in seconds, if not defined than no session expiration
